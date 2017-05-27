@@ -1,0 +1,7 @@
+<template name="point">
+    <view class="point">
+        <text>Point</text>
+        <view>({{x}}, {{y}})</view>
+        <button type="primary" data-id="{{id}}" bindtap="tap">click</button>
+    </view>
+</template>

@@ -1,0 +1,16 @@
+.point {
+    margin: 20rpx;
+    text-align: center;
+    background: #eee;
+    padding: 20rpx;
+}
+
+.point text {
+    font-size: 48rpx;
+    font-weight: bold;
+}
+
+.point view {
+    line-height: 160%;
+    font-size: 36rpx;
+}
