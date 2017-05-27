@@ -14,6 +14,6 @@ Page({
   },
 
   submit() {
-    
+    console.log(this.data.p1.x);
   }
 })
