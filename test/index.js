@@ -1,16 +1,14 @@
 // test/index.js
-import Point from '../src/point/index.js';
+import Mupload from '../src/mupload/index.js';
 
 Page({
 
   data: {
-    p1: Point.data('p1', 42, 24),
-    p2: Point.data('p2', 32, 270),
-    p3: Point.data('p3')
+    m1: Mupload.data('m1')
   },
 
   onLoad: function (options) {
-    Point.init(this);
+    Mupload.init(this);
   },
 
   submit() {

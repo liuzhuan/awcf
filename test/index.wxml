@@ -1,10 +1,8 @@
 <!--test/index.wxml-->
-<import src="../src/point/index.wxml" />
+<import src="../src/mupload/index.wxml" />
 
 <text>test/index.wxml</text>
 
-<template is="point" data="{{ ...p1 }}" />
-<template is="point" data="{{ ...p2 }}" />
-<template is="point" data="{{ ...p3 }}" />
+<template is="mupload" data="{{ ...m1 }}" />
 
 <button type="primary" bindtap="submit">submit</button>

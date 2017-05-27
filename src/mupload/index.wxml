@@ -1,0 +1,33 @@
+<template name="mupload-button">
+  <view data-id="{{id}}" bindtap="onbrowse">
+    <view class="mupload__button mupload__button--large" wx:if="{{ imgs.length <= 0 }}">
+      <view class="button__icon">+</view>
+      <view class="button__label">点击上传项目图片（{{limit}}张）</view>
+    </view>
+    <view class="mupload__button" wx:else>
+      <view class="button__icon">+</view>
+      <view class="button__label">添加图片</view>
+    </view>
+  </view>
+</template>
+
+<template name="mupload-img">
+  <view class="mupload__item">
+    <image class="mupload__img" src="{{item}}" bindtap="onpreview" data-id="{{id}}" data-index="{{index}}" />
+    <view class="mupload__close" bindtap="onclose" data-id="{{id}}" data-index="{{index}}">X</view>
+  </view>
+
+</template>
+
+<template name="mupload">
+  <view class="mupload">
+    mupload
+    <view class="mupload__list">
+      <block wx:for="{{ imgs }}">
+        <template is="mupload-img" data="{{ id, item, index }}" />
+      </block>
+    </view>
+    <template is="mupload-button" data="{{ id, limit, imgs }}" />
+  </view>
+</template>
+
