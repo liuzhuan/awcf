@@ -1,5 +1,5 @@
 <template name="mupload-button">
-  <view data-id="{{id}}" bindtap="onbrowse">
+  <view data-id="{{id}}" bindtap="onbrowse" wx:if="{{imgs.length < limit}}">
     <view class="mupload__button mupload__button--large" wx:if="{{ imgs.length <= 0 }}">
       <view class="button__icon">+</view>
       <view class="button__label">点击上传项目图片（{{limit}}张）</view>
