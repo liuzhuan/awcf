@@ -1,0 +1,11 @@
+<!--test/dialog/index.wxml-->
+<import src="../../src/dialog/index.wxml" />
+<text>test/dialog/index.wxml</text>
+
+<template is="dialog" data="{{ ...dialog }}"></template>
+
+<button bindtap="openDialog" data-target="dialog" data-content="{{dialog0.content}}" data-title="{{dialog0.title}}" data-footer="{{dialog0.footer}}">Dialog 1</button>
+
+<button bindtap="openDialog" data-target="dialog" data-content="{{dialog1.content}}" data-title="{{dialog1.title}}" data-footer="{{dialog1.footer}}">Dialog 2</button>
+
+<button bindtap="openDialog" data-target="dialog" data-content="{{dialog2.content}}" data-title="{{dialog2.title}}" data-footer="{{dialog2.footer}}">Dialog 3</button>

@@ -1,0 +1,142 @@
+view,:after, :before {
+  box-sizing: border-box;
+}
+
+.h5ui-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1050;
+  overflow: hidden;
+  outline: 0;
+  -webkit-overflow-scrolling:touch;
+}
+
+.h5ui-modal .modal-dialog{
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  left: 0;
+  padding: 0 30rpx;
+  top: 8%;
+  animation: b .3s 0ms ease both;
+}
+
+.h5ui-modal .modal-content {
+  position: relative;
+  background-clip: padding-box;
+  border-radius: 8rpx;
+  max-width: 640rpx;
+  margin: 30rpx auto;
+  background: #fff;
+}
+
+.h5ui-modal .modal-content view {
+  margin-bottom: 20rpx;
+}
+
+.h5ui-modal .modal-content view.modal-footer,
+.h5ui-modal .modal-content view.h5ui-btn {
+  margin-bottom: 0rpx;
+}
+
+.h5ui-modal .modal-content image {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.h5ui-modal .modal-header {
+  font-size: 36rpx;
+  text-align: center;
+  padding: 30rpx 30rpx 20rpx;
+}
+
+.h5ui-modal .modal-body {
+  position: relative;
+  font-size: 32rpx;
+  color: #666;
+  padding: 0 30rpx;
+  max-height: 640rpx;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.h5ui-modal .modal-footer {
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+.h5ui-modal .modal-footer:before {
+  content: " ";
+  transform: scale(.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 0;
+  border-top: 2rpx solid #e5e5e5;
+}
+
+.h5ui-modal .modal-footer:after {
+  content: " ";
+  position: absolute;
+  top: -40rpx;
+  left: 0;
+  width: 97%;
+  height: 40rpx;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAUCAYAAADPym6aAAAAAXNSR0IArs4c6QAAAKVJREFUSA3tltEKgCAMRc0KKqKi+oz+//Oy3QehXpyYwRwNBMM7vcc5qHLOHUZBNMTQKeAwABm1gEw/iKAbwNNaBflJtgKQLTmbTzxJYm8yfH8RFiB7YGfuYG+S0wWOyLP0dUXyuIzYRRXIEgEsXoKKDDRq8U4ZgwDpafimZeSPZeSKCZiZxbh5YQQgan4ai+8PFBIVaTEpPQCS0ujiuFVA4FbVgFxHFwhNXnJVIwAAAABJRU5ErkJggg==") repeat-x;
+}
+
+.h5ui-modal .modal-footer .h5ui-btn {
+  color: #43ac43;
+  font-weight: 600;
+  border-radius: 0;
+  padding: 24rpx 30rpx;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table;
+}
+
+@keyframes b {
+  0% {
+    opacity: 0;
+    transform: scale(.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-backdrop {
+  position:fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index:1040;
+  background: #000;
+  opacity: .4;
+}
+
+.h5ui-modal .h5ui-btn.gradient-button {
+  background-image: linear-gradient(90deg, #00D66F 0%, #43AC43 100%);
+  box-shadow: 0 20rpx 40rpx 0 rgba(66,172,67,0.30);
+  font-size: 36rpx;
+  color: #FFFFFF;
+  text-align: center;
+  border-bottom-left-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+}

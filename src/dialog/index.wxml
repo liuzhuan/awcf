@@ -1,0 +1,16 @@
+<template name="dialog">
+  <view class="h5ui-modal" wx:if="{{show}}">
+    <view class="modal-dialog middle">
+      <view class="modal-content clearfix">
+        <view class="modal-header">{{title}}</view>
+        <view class="modal-body">
+          <image src="{{content}}" mode="widthFix" />
+        </view>
+        <view class="modal-footer">
+          <view class="h5ui-btn gradient-button" bindtap="_closeDialog" data-id="{{id}}">{{footer}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <div class="modal-backdrop" bindtap="_closeDialog" data-id="{{id}}" wx:if="{{show}}"></div>
+</template>
