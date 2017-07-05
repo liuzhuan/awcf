@@ -1,0 +1,10 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">录音功能</view>
+    <view class="page_desc">录音功能尝试</view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="primary" bindtap="onRecordStart">开始录音</button>
+    <button class="weui-btn" bindtap="onRecordStop">停止录音</button>
+  </view>
+</view>

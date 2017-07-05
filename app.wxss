@@ -1,1 +1,3 @@
+@import './style/weui.wxss';
+@import './style/base.wxss';
 @import './src/mupload/index.wxss';

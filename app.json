@@ -1,5 +1,6 @@
 {
   "pages": [
+    "test/record/index",
     "test/dialog/index",
     "test/index"
   ]
