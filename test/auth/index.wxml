@@ -17,4 +17,8 @@
       </view>
     </view>
   </view>
+
+  <view class="weui-btn-area">
+    <button type="primary" open-type="contact" session-from="weapp">Service Message</button>
+  </view>
 </view>
