@@ -1,5 +1,6 @@
 {
   "pages": [
+    "test/form/index",
     "test/auth/index",
     "test/record/index",
     "test/dialog/index",
