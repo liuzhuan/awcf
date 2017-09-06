@@ -20,7 +20,6 @@ Page({
       y: e.touches[0].y
     });
 
-    ctx.beginPath();
     ctx.moveTo(e.touches[0].x, e.touches[0].y);
   },
   move(e) {
@@ -30,9 +29,8 @@ Page({
     })
 
     ctx.lineTo(e.touches[0].x, e.touches[0].y);
-    // ctx.stroke();
-
-    ctx.draw(true);
+    ctx.stroke();
+    ctx.draw();
   },
   end(e) {
     this.setData({
