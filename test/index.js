@@ -1,17 +1,21 @@
-// test/index.js
-import Mupload from '../src/mupload/index.js';
-
 Page({
 
   data: {
-    m1: Mupload.data('m1')
+    amount: '',
+    title: '',
+    description: ''
   },
 
-  onLoad: function (options) {
-    Mupload.init(this);
-  },
+  input,
+  formSubmit
+});
 
-  submit() {
-    console.log(this.data.p1.x);
-  }
-})
+function input(e) {
+  const {id} = e.currentTarget;
+  const {value} = e.detail;
+  this.data[id] = value;
+}
+
+function formSubmit() {
+  console.info(this.data);
+}

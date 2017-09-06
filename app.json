@@ -1,10 +1,10 @@
 {
   "pages": [
+    "test/index",
     "test/canvas/index",
     "test/form/index",
     "test/auth/index",
     "test/record/index",
-    "test/dialog/index",
-    "test/index"
+    "test/dialog/index"
   ]
 }
