@@ -18,4 +18,7 @@ function input(e) {
 
 function formSubmit() {
   console.info(this.data);
+  wx.navigateTo({
+    url: '/test/msg-success/index'
+  });
 }

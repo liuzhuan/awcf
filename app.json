@@ -1,6 +1,7 @@
 {
   "pages": [
     "test/index",
+    "test/msg-success/index",
     "test/canvas/index",
     "test/form/index",
     "test/auth/index",
