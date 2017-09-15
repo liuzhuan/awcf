@@ -1,8 +1,12 @@
+import {createPath, getCurrentPage} from '../../utils/index.js';
+
 Page({
   data: {
     date: '',
     title: '',
-    description: ''
+    description: '',
+    options: '',
+    route: ''
   },
 
   onLoad,
@@ -10,21 +14,27 @@ Page({
 })
 
 function onShareAppMessage(options) {
-  const {title} = this.data;
-  const path = ''
+  const {title, route, description, date} = this.data;
+  const path = createPath(route, {title, date, description});
   return {
-    title
+    title,
+    path
   }
 }
 
 function onLoad(options) {
   const {date, title, description} = options;
-  console.log(date, title, description);
+  const process = decodeURIComponent;
+  const route = getCurrentPage().route;
   this.setData({
-    date,
-    title,
-    description
+    date: process(date),
+    title: process(title),
+    description: process(description),
+    options,
+    route
   });
+
+  console.log(options);
 }
 
 function onBack() {

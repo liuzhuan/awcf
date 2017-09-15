@@ -13,11 +13,22 @@ export function navTo(url, params = {}, m='navTo') {
   }
 
   const method = methodHash[m];
+
+
+  method({
+    url: createPath(url, params)
+  });
+}
+
+export function createPath(route, params = {}) {
   const keys = Object.keys(params);
   const search = keys.map(key => (key + '=' + params[key]))
     .join('&');
+  return route + '?' + search;
+}
 
-  method({
-    url: url + '?' + search
-  });
+export function getCurrentPage() {
+  const pages = getCurrentPages();
+  const len = pages.length;
+  return pages[len-1];
 }

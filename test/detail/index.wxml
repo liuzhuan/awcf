@@ -11,3 +11,9 @@
     </view>
   </view>
 </view>
+
+<view style="color: #f8f8f8;">
+  <text selectable="true" wx:for="{{options}}">
+    {{index}}: {{item}}
+  </text>
+</view>
