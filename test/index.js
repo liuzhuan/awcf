@@ -1,7 +1,9 @@
+import {navTo} from '../utils/index.js';
+
 Page({
 
   data: {
-    amount: '',
+    date: '',
     title: '',
     description: ''
   },
@@ -17,8 +19,12 @@ function input(e) {
 }
 
 function formSubmit() {
-  console.info(this.data);
-  wx.navigateTo({
-    url: '/test/msg-success/index'
-  });
+  const url = '/test/detail/index';
+  const {date, title, description} = this.data;
+  const params = {
+    date,
+    title,
+    description
+  }
+  navTo(url, params);
 }

@@ -1,6 +1,0 @@
-/* test/dialog/index.wxss */
-@import '../../src/dialog/index.wxss';
-
-.dialog-button {
-  margin: 20rpx;
-}
